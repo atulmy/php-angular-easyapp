@@ -49,14 +49,16 @@ final class DbConnection {
             } else if($databases[$database]['driver'] == 'mongo') {
                 try {
                     $connection = null;
-                    $serverSettings =  sprintf('mongodb://%s:%d/%s', $databases[$database]['host'], $databases[$database]['port'], $databases[$database]['database']); // Default Port: 27017
-                    if($databases[$database]['user'] != '' && $databases[$database]['password'] != '') {
-                        $connection = new Mongo($serverSettings, array('username' => $databases[$database]['user'], 'password' => $databases[$database]['password']));
-                    } else {
-                        $connection = new Mongo($serverSettings);
-                    }
-                    if($connection) {
-                        $databaseConnection = $connection->selectDB($databases[$database]['database']);
+                    if (class_exists('Mongo')) {
+                        $serverSettings =  sprintf('mongodb://%s:%d/%s', $databases[$database]['host'], $databases[$database]['port'], $databases[$database]['database']); // Default Port: 27017
+                        if($databases[$database]['user'] != '' && $databases[$database]['password'] != '') {
+                            $connection = new Mongo($serverSettings, array('username' => $databases[$database]['user'], 'password' => $databases[$database]['password']));
+                        } else {
+                            $connection = new Mongo($serverSettings);
+                        }
+                        if($connection) {
+                            $databaseConnection = $connection->selectDB($databases[$database]['database']);
+                        }
                     }
                 } catch (Exception $err){
                     $sysErr = 'Message: ' .$err->getMessage();
