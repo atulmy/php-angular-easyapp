@@ -1,7 +1,7 @@
 <!-- Header -->
     <div class="sixteen columns">
         <h1 class="remove-bottom" style="margin-top: 20px">
-            <a href="<?php echo URL_WEB; ?>" title="Home" style="text-decoration: none;"><?php echo WEBSITE_TITLE; ?></a>
+            <a href="<?php echo URL_WEB; ?>" title="Home" style="text-decoration: none;">EasyApp</a>
         </h1>
         <h6 style="color: #666666;">Version <?php echo WEBSITE_VERSION; ?></h6>
         <!-- Just add .button to an anchor -->

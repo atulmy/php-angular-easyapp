@@ -24,6 +24,8 @@ $easyApp['view_type'] = 'html'; // overwrite it in your controller file
 // Set data for view
 $easyApp['view_data'] = array(); // add your data with new jey in this array in your controller file, make sure same key is not used
 $easyApp['view_data']["website"]["title"] = WEBSITE_TITLE;
+$easyApp['view_data']["website"]["keywords"] = 'easyapp, application template, web application, extendable, spa, ria, html5, css3, responsive, php, mysql, mongodb, nosql, angularjs, skeleton css, jquery';
+$easyApp['view_data']["website"]["description"] = 'An easy, flexible, very light weight, extendable, small to medium scale application template. Recommended for beginners exploring web technologies. Best suited for SPAs and RIAs.';
 
 $_INPUT = array();
 if(file_get_contents("php://input")) {

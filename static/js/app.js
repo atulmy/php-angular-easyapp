@@ -11,27 +11,27 @@ easyApp.config(['$routeProvider', function($routeProvider){
     $routeProvider
         .when('/home', {
             controller: 'index',
-            templateUrl: '/view/index.view.html'
+            templateUrl: '/view/index.view.php'
         })
         .when('/readme', {
             controller: 'readme',
-            templateUrl: '/view/readme.view.html'
+            templateUrl: '/view/readme.view.php'
         })
         .when('/sample/form', {
             controller: 'sampleForm',
-            templateUrl: '/view/sample/form.view.html'
+            templateUrl: '/view/sample/form.view.php'
         })
         .when('/database/mysql', {
             controller: 'databaseMysql',
-            templateUrl: '/view/database/mysql.view.html'
+            templateUrl: '/view/database/mysql.view.php'
         })
         .when('/database/mongodb', {
             controller: 'databaseMongodb',
-            templateUrl: '/view/database/mongodb.view.html'
+            templateUrl: '/view/database/mongodb.view.php'
         })
         .when('/download', {
             controller: 'download',
-            templateUrl: '/view/download.view.html'
+            templateUrl: '/view/download.view.php'
         })
         /* loading view dynamically
         .when('/sample/:page', {

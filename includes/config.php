@@ -16,7 +16,7 @@ define('URL_JS', 'http://'.$_SERVER['HTTP_HOST'].'/static/js/');
 define('URL_CSS', 'http://'.$_SERVER['HTTP_HOST'].'/static/css/');
 define('URL_FILES', 'http://'.$_SERVER['HTTP_HOST'].'/static/files/');
 
-define('WEBSITE_TITLE', 'EasyApp');
+define('WEBSITE_TITLE', 'EasyApp - Web Application Template');
 define('WEBSITE_VERSION', '0.1');
 define('WEBSITE_VERSION_RELEASE', '&alpha;');
 
